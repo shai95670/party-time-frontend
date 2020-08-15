@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+#app {
+    font-family: Mulish;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: white;
+    background: $color-primary-gray;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: url("") no-repeat center center fixed;
+    background-size: cover;
+    // background-color: #e1f3ff;
+    font-family: "Actor", sans-serif;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+}
+button {
+    color: white;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 6px;
+    transition-duration: 0.3s;
+    font-size: 15px;
+    outline: none;
+    &.active {
+        background-color: $color-primary-red;
+    }
+    i {
+        color: white;
+    }
+    &:hover {
+        transition-duration: 0.3s;
+        background-color: $color-primary-red;
+    }
+}
+
+input {
+    font-family: "Actor", sans-serif;
+    padding: 0.5rem;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-size: 1.17em;
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+p {
+    color: white;
+}
+.red {
+    color: #c1272d;
+}

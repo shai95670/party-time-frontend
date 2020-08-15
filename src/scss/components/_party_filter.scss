@@ -1,0 +1,224 @@
+.main-filter-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: #333333;
+  color: #d8d8d8;
+  border-radius: 0px 10px 10px 0px;
+  padding: 10px 20px;
+  position: sticky;
+  top: 55px;
+  height: fit-content;
+  .header {
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    p {
+      margin: 0;
+      &:first-of-type {
+        font-weight: 600;
+      }
+    }
+    &.fees {
+      margin-top: 10px;
+    }
+    &.time {
+      margin-top: 10px;
+    }
+    &.distance {
+      margin-top: 10px;
+    }
+  }
+  .nav-sort-container {
+    // background-color: burlywood;
+
+    .sort-buttons-container {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 15px;
+      button {
+        // @include aspect-ratio(100, 100);
+        border: 0;
+        background-color: rgb(0, 0, 0);
+        border-radius: 6px;
+        transition-duration: 0.3s;
+        height: 44px;
+        width: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.active {
+          background-color: $color-primary-red;
+        }
+        i {
+          font-size: 1.5rem;
+          color: white;
+        }
+        &:hover {
+          transition-duration: 0.3s;
+          background-color: $color-primary-red;
+        }
+      }
+    }
+  }
+  .hr {
+    width: 100%;
+    height: 1px;
+    background-color: #a0a0a0;
+    // margin-top: 15px;
+    // margin-bottom: 15px;
+    &.locality {
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+  }
+  .nav-ranges-container {
+    display: flex;
+    flex-direction: column;
+    .ranges-lable-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .slidecontainer {
+      width: 100%;
+      margin-bottom: 7px;
+      .el-slider__runway {
+        background-color: black;
+        height: 10px;
+        border-radius: 7px;
+      }
+      .el-slider__bar {
+        background-color: $clr1;
+        height: 10px;
+        border-radius: 7px;
+      }
+      .el-slider__button {
+        margin-top: 4px;
+        height: 23px;
+        width: 23px;
+        border: 1px solid #000000;
+        background-color: $clr1;
+      }
+      .el-slider__button-wrapper {
+        z-index: 0;
+      }
+    }
+  }
+  select {
+    padding: 6px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    margin-bottom: 5px;
+  }
+
+  .nav-dropdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // padding: 15px;
+
+    .nav-dropdown-content {
+      display: flex;
+      flex-direction: column;
+      width: 53%;
+    }
+
+    input {
+      font-family: "Actor", sans-serif;
+      padding: 0.5rem;
+      color: white;
+      text-overflow: ellipsis;
+      border-radius: 6px;
+      border: 0;
+      background-color: black;
+    }
+  }
+  .el-input {
+    .el-input__inner {
+      background-color: black;
+    }
+  }
+  .el-select .el-input.is-focus .el-input__inner {
+    border-color: $clr1;
+  }
+  .el-tag.el-tag--info {
+    background-color: #8e0000;
+    border-color: none;
+    color: #ffffff;
+    overflow: hidden;
+  }
+}
+.el-select-dropdown {
+  border: 1px solid $clr1;
+  border-radius: 7px;
+  background-color: #000;
+  .el-select-dropdown__item {
+    color: white;
+    &:hover {
+      background-color: #8e0000 !important;
+    }
+    &.selected {
+      color: rgb(255, 255, 255) !important;
+      background-color: #8e0000 !important;
+    }
+  }
+}
+.el-select-dropdown__item.hover {
+  background-color: #8e0000;
+}
+.main-filter-container .el-tag.el-tag--info {
+  border: none;
+}
+
+.filter-btns {
+  margin-top: 5px;
+  padding: 10px;
+  .btn {
+    border: 0;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 6px;
+    width: 50%;
+    color: white;
+    transition: 0.3s;
+    margin: 0px 4px;
+    &:hover {
+      background-color: $color-primary-red;
+    }
+    &.active {
+      background-color: $color-primary-red;
+    }
+  }
+}
+.el-select .el-input__inner {
+  color: white;
+}
+
+.el-select .el-input__inner:focus {
+  border-color: $clr1;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .main-filter-container {
+    min-width: 300px;
+    background-color: #272727;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 7px 0px 0px 7px;
+    box-shadow: 0 0 20px 3px black;
+    overflow: auto;
+    &.show {
+      transition: 0.3s;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

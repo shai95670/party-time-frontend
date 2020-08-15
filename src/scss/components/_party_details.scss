@@ -1,0 +1,182 @@
+.party-details {
+    margin-top: 56px;
+    .login-page {
+        background-image: none;
+        height: fit-content;
+        form {
+            // width: 100vw;
+            background-color: #000000c2;
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            top: 53px;
+            margin: 0px auto;
+        }
+    }
+}
+.event-buttons-container {
+    background-color: #3b3b3b;
+    padding: 10px 13px;
+    margin-bottom: 10px;
+    // padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 56px;
+    z-index: 2;
+    button {
+        background-color: #00000000;
+        color: #e6e6e6;
+        border-width: 0px;
+        font-size: 0.8rem;
+        // margin: 5px;
+        border-radius: 7px;
+        transition-duration: 0.3s;
+        padding: 0px 10px;
+        // height: 60px;
+        // width: 60px;
+        &:hover {
+            background-color: #c1272d;
+        }
+        i {
+            font-size: 1.6rem;
+        }
+        .fa-heart {
+            color: #c1272d;
+            transition: 0.3s;
+        }
+        &:focus .fa-heart {
+            color: white;
+        }
+    }
+}
+
+.details-and-map-container {
+    .table-container {
+        color: #e4e6eb;
+        width: 60%;
+        table.detail-table {
+            width: 100%;
+            font-size: 1rem;
+            border-collapse: collapse;
+            text-align: left;
+            p {
+                margin: 0;
+            }
+            td {
+                padding-top: 10px;
+            }
+            td.txt {
+                border: none;
+                border-bottom: 1px solid #dddddd;
+                border-color: #acacac;
+                color: white;
+                p.desc {
+                    margin-top: 3px;
+                    margin-bottom: 7px;
+                    font-size: 1rem;
+                    color: #acacac;
+                }
+                p.type {
+                    margin-right: 10px;
+                }
+                p.title {
+                    font-size: 1.5rem;
+                }
+                .party-desc {
+                    color: white;
+                    font-size: 1.2rem;
+                    white-space: pre-wrap;
+                    // font-family: Arial, Helvetica, sans-serif;
+                    // font-family: Mulish;
+                    font-family: "Actor", sans-serif;
+                }
+            }
+            td.icon {
+                border: none;
+                text-align: center;
+                width: 60px;
+                color: white;
+            }
+        }
+    }
+    .map-members-container {
+        padding: 0px 10px;
+        padding-top: 17px;
+
+        &.column-layout {
+            width: 40%;
+        }
+        .map-container {
+            img {
+                border-radius: 7px;
+                width: 100%;
+            }
+        }
+        .members {
+            background-color: #3b3b3b;
+            border-radius: 7px;
+            color: white;
+            width: 96%;
+            margin-bottom: 9px;
+            p.title {
+                margin: 0;
+                text-align: left;
+                padding-left: 10px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border-radius: 7px 7px 0px 0px;
+                box-shadow: 0px 0px 20px -10px rgb(5, 5, 5);
+            }
+            .members-img-container {
+                display: grid;
+                grid-template-columns: auto auto auto auto auto;
+                // display: flex;
+                // justify-content: space-evenly;
+                // flex-wrap: wrap;
+                padding: 5px;
+                .member-con {
+                    // background-color: darkblue;
+                    text-align: center;
+                    img {
+                        border-radius: 25px;
+                        width: 50px;
+                        margin: 5px;
+                    }
+                    p {
+                        text-align: center;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .details-and-map-container {
+        flex-direction: column;
+
+        .table-container {
+            width: 100%;
+            padding-right: 25px;
+            margin-bottom: 15px;
+        }
+        .map-members-container.column-layout {
+            width: 100%;
+            .party-map {
+                margin-bottom: 20px;
+                .box-card {
+                    height: 160px;
+                    .img-box {
+                        width: 60%;
+                    }
+                }
+            }
+            .members {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}

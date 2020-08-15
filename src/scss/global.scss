@@ -1,0 +1,24 @@
+// Setup
+@import "setup/variables.scss";
+@import "setup/functions.scss";
+@import "setup/mixins.scss";
+@import "setup/typography.scss";
+
+// Basics
+@import "basics/helpers.scss";
+@import "basics/layout.scss";
+@import "basics/base.scss";
+
+// Components
+@import "components/_nav_bar.scss";
+@import "components/_party_filter.scss";
+@import "components/_party_list.scss";
+@import "components/_party_details.scss";
+@import "components/_datetime.scss";
+@import "components/members_pic.scss";
+
+// VIEWS
+@import "views/home_page.scss";
+@import "views/login_page.scss";
+@import "views/signup_page.scss";
+@import "views/welcome_page.scss";
